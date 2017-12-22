@@ -1,2 +1,1 @@
-## Fork from [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
-
+# [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
