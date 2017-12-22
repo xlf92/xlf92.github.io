@@ -11,10 +11,8 @@ tags:
   - edge case
   - image
   - layout
-last_modified_at: 2016-05-02T11:39:01-04:00
+last_modified_at: 2016-11-03T11:45:09-04:00
 ---
-
-{% include base_path %}
 
 This post should display a **header with an overlay image**, if the theme supports it.
 
@@ -26,7 +24,7 @@ This post tests overlay header images.
 
 You can use it by specifying the opacity (between 0 and 1) of a black overlay like so:
 
-![transparent black overlay]({{ basepath }}/assets/images/mm-header-overlay-black-filter.jpg)
+![transparent black overlay]({{ "/assets/images/mm-header-overlay-black-filter.jpg" | absolute_url }})
 
 ```yaml
 excerpt: "This post should [...]"
@@ -40,7 +38,7 @@ header:
 
 Or if you want to do more fancy things, go full rgba:
 
-![transparent red overlay]({{ basepath }}/assets/images/mm-header-overlay-red-filter.jpg)
+![transparent red overlay]({{ "/assets/images/mm-header-overlay-red-filter.jpg" | absolute_url }})
 
 ```yaml
 excerpt: "This post should [...]"
