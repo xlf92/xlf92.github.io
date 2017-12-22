@@ -5,35 +5,32 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-theme                    : "minimal-mistakes-jekyll"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
 # Site Settings
-locale                   : "en"
-title                    : "Minimal Mistakes Development Test Site"
+locale                   : "zh-CN"
+title                    : "Home"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "Minimal Mistakes theme test."
-url                      : https://xlf92.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : 
-repository               : "xlf92.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+name                     : &name "Keyan Ding"
+description              : &description "A keen researcher"
+url                      : https://dingkeyan93.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "dingkeyan93/dingkeyan93.github.io"
+teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+breadcrumbs              : false # true, false (default)
+words_per_minute         : 160
+read_more                : "Read more" #"disabled"  if enabled, adds "Read more" links to excerpts
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "disqus" #"custom" #  false (default), , "discourse","facebook" , "google-plus", "facebook""staticman", 
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "dingkeyan93"
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963, e.g.:meta.discourse.org  
   facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
+    appid                : “dingkeyan”
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : #"light" (default),  "dark" 
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : # "master", "gh-pages"
+  branch                 : "gh-pages" # "master", "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -49,21 +46,21 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : true # true, false (default)
 
 # SEO Related
 google_site_verification :
 bing_site_verification   :
+alexa_site_verification  :
 yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : "mmistakes"
+  username               : &twitter
 facebook:
-  username               :
+  username               : 
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/bio-photo.jpg"
+og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -71,54 +68,59 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "custom"  # "google" false (default),, "google-universal", 
   google:
     tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Linfang Xiao"
-  avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
-  uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
+  name             : "Keyan Ding"
+  avatar           : "profile.png"
+  bio              : "A prospective PhD student in City University of Hong Kong"
+  location         : "Hangzhou, China"
+  employer         :
+  googlescholar    : "https://scholar.google.com/citations?hl=zh-CN&user=A7u-ZowAAAAJ"
+  email            : "dingkeyan93@outlook.com"
+  uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : “dingkeyan”
   foursquare       :
-  github           :
+  github           : "dingkeyan93"
+  researchgate     : 
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
   linkedin         :
+  orcid            : "https://www.researchgate.net/profile/Keyan_Ding2"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  stackoverflow    : 
   steam            :
   tumblr           :
-  twitter          : "mmistakes"
+  twitter          : 
   vine             :
-  weibo            :
+  weibo            : "dingkeyanlail"
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          :
+  wikipedia        :
 
 
 # Reading Files
 include:
   - .htaccess
   - _pages
+  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
-  - vendor
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -145,10 +147,6 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Liquid
-strict_front_matter: true
-liquid:
-  error_mode: strict
 
 # Conversion
 markdown: kramdown
@@ -170,6 +168,84 @@ kramdown:
   enable_coderay: false
 
 
+# Collections
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+  code:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      comments: true
+      share: true
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+      comments: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
+      comment: true
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
@@ -178,19 +254,18 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
+timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins (previously gems:)
-plugins:
+# Plugins
+gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
-
+  - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -235,61 +310,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-
-# Collections
-collections:
-  recipes:
-    output: true
-    permalink: /:collection/:path/
-  pets:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _recipes
-  - scope:
-      path: ""
-      type: recipes
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  # _pets
-  - scope:
-      path: ""
-      type: pets
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
